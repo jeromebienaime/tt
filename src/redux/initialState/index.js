@@ -1,3 +1,3 @@
 export default {
-    timer: 0
+    value: 0
 }
