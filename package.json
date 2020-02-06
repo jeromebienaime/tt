@@ -1,0 +1,16 @@
+{
+  "name": "tt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jeromebienaime/tt.git",
+  "author": "jeromebienaime <jerome.bienaime@bulle-communication.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/parcel src/index.html",
+    "serve:gitpod": "./node_modules/.bin/parcel parcel src/index.html --host=0.0.0.0"
+  },
+  "dependencies": {
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6"
+  }
+}
