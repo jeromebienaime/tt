@@ -1,4 +1,3 @@
 export default {
-    timer: 0,
-    history: []
+    timer: 0
 }

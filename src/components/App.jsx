@@ -3,16 +3,16 @@ import {connect} from "react-redux"
 
 import Timer from "../containers/Timer"
 
-const App = () => {
+const App = (props) => {
     return (
         <>
-            <Timer time={this.props.timer} />
+            <Timer time={props.timer} />
         </>
     )
 }
 
-const mapStateToProps = {
+const mapStateToProps =(state) =>  ({
     timer: state.timer
-}
+})
 
 export default connect(mapStateToProps)(App)

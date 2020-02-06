@@ -1,10 +1,13 @@
 import initialState from "../initialState"
+import {ADD_TIMER, REMOVE_TIMER} from "../actions/timer"
 
-export function timer (state = initialState, actions) {
+export default function timer (state = initialState, actions) {
     switch (actions.type) {
         case ADD_TIMER: 
             return {...state, timer: 0, running: false}
         case REMOVE_TIMER:
-            return {...state, timer: 0, running: false, history: [...history, state.timer]}
+            return {...state, timer: 0, running: false}
+        default:
+            return state
     }
 }

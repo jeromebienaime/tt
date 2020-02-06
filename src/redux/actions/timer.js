@@ -1,5 +1,5 @@
-export default ADD_TIMER = `ADD_TIMER`
-export default REMOVE_TIMER = `REMOVE_TIMER`
+export const ADD_TIMER = `ADD_TIMER`
+export const REMOVE_TIMER = `REMOVE_TIMER`
 
 export function addTimer (payload) {
     return {
