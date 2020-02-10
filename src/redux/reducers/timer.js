@@ -1,5 +1,5 @@
 import initialState from "../initialState"
-import {ADD_TIMER, REMOVE_TIMER, COUNT} from "../actions/timer"
+import {ADD_TIMER, REMOVE_TIMER, COUNT, STOP_COUNT} from "../actions/timer"
 
 export default function timerReducer (state = initialState, actions) {
     switch (actions.type) {
@@ -8,7 +8,9 @@ export default function timerReducer (state = initialState, actions) {
         case REMOVE_TIMER:
             return {...state, value: 0 , running: false}
         case COUNT:
-            return { value: state.value + 1}
+            return { value: state.value + 1, running: true}
+        case STOP_COUNT:
+            return {value: state.value, running: false}
         default:
             return state
         
