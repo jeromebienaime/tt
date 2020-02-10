@@ -2,5 +2,6 @@ sudo: false
 language: node_js
 before_install:
   - npm i -g ava
+  - yarn add esm
 node_js:
   - "10.18.0"
