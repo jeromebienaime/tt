@@ -5,4 +5,6 @@ before_install:
   - yarn add esm
 node_js:
   - "10.18.0"
+  - "lts"
+  - "lts/*"
 cache: yarn
