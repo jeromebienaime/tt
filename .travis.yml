@@ -4,9 +4,6 @@ before_install:
   - yarn global add ava
   - yarn add esm
 node_js:
-  - "lts/boron"
-  - "lts/aragon"
-  - "lts/carbon"
   - "lts/erbium"
   - "lts/dubnium"
   - "lts/*"
