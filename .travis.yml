@@ -4,7 +4,10 @@ before_install:
   - yarn global add ava
   - yarn add esm
 node_js:
-  - "10.18.0"
-  - "lts"
+  - "lts/boron"
+  - "lts/aragon"
+  - "lts/carbon"
+  - "lts/erbium"
+  - "lts/dubnium"
   - "lts/*"
 cache: yarn
