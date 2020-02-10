@@ -1,6 +1,6 @@
 sudo: false
 language: node_js
 before_install:
-  - npm i -g npm@6.4.1
+  - npm i -g ava
 node_js:
   - "10.18.0"
