@@ -3,7 +3,7 @@ import React from "react"
 
 const Current = ({item}) => (
     <>
-        {item.label}
+        <p>{item.label}</p>
     </>
 )
 

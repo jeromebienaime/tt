@@ -4,10 +4,24 @@
  * @description Defines the actions to manage a list of todos
  */
 
-/** @type STRING */
+/** 
+ * @description ADD_TODO actionType.
+ * @type String 
+ * @example
+ * ```js
+ *      dispatch({ type: ADD_TODO, payload: { name: "do the wishes" } })
+ * ```
+ */
 export const ADD_TODO = `ADD_TODO`
 
-/** @type STRING */
+/** 
+ * @description REMOVE_TODO actionType
+ * @type String
+ * @example
+ * ```js
+ *      dispatch({ type: REMOVE_TODO, payload: { id: 1} })
+ * ``` 
+ * */
 export const REMOVE_TODO = `REMOVE_TODO`
 
 /** @type STRING */

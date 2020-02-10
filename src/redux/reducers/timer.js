@@ -8,9 +8,9 @@ export default function timerReducer (state = initialState, actions) {
         case REMOVE_TIMER:
             return {...state, value: 0 , running: false}
         case COUNT:
-            return { value: state.value + 1, running: true}
+            return { value: state.value + 1, running: true, started_at: new Date()}
         case STOP_COUNT:
-            return {value: state.value, running: false}
+            return {...state, value: state.value, running: false, stopped_at: new Date()}
         default:
             return state
         
