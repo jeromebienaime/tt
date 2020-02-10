@@ -24,11 +24,23 @@ export const ADD_TODO = `ADD_TODO`
  * */
 export const REMOVE_TODO = `REMOVE_TODO`
 
-/** @type STRING */
+/** 
+ * @description NEXT_TODO actionType 
+ * @type String
+ * @example
+ * ```js
+ *      dispatch({ type: NEXT_TODO , payload: { name: "do the wishes" } })
+ * ```
+ */
 export const NEXT_TODO = `NEXT_TODO`
 
-/** Adds a todo to the list
+/** 
+ * @description Adds a todo to the list
  * @param {JSON} payload - new todo
+ * @example
+ * ```js
+ *      dispatch(addTodo({ name: "do the wishes" }))
+ * ```
  */
 export function addTodo (payload) {
     return {
@@ -37,8 +49,13 @@ export function addTodo (payload) {
     }
 }
 
-/** Removes a todo from the list
+/** 
+ * @description Removes a todo from the list
  * @param {JSON} payload - old todo
+ * @example
+ * ```js 
+ *      dispatch(removeTodo({ id: 1 }))
+ * ```
  */
 export function removeTodo (payload) {
     return {
@@ -47,13 +64,18 @@ export function removeTodo (payload) {
     }
 }
 
-/** Set the next todo in the list as active todo
- * @param {JSON} payload - todo
+/** 
+ * @description Set the next todo in the list as active todo
+ * @param {time: number} payload - timer for the todo
+ * @example
+ * ```js
+ *      dispatch(nextTodo({ time: 1240 }))
+ *  ```
  */
 export function nextTodo (payload) {
     return {
         type: NEXT_TODO,
         payload
-        }
+    }
 }
 
