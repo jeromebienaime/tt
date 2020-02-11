@@ -73,4 +73,3 @@ import Timer from "./components/Timer.jsx"
 
 ReactDOM.render(<><Timer /><>, document.body)
 ```
-

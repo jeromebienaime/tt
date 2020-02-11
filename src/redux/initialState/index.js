@@ -9,10 +9,10 @@ export default {
                     id: chance().ssn({ ssnFour: true, dashes: false }),
                     label: "todo"
                 }, {
-                    id: chance().ssn({ ssnFour: true, dashes: false}),
+                    id: chance().ssn({ ssnFour: true, dashes: false }),
                     label: "todoA"
                 }, {
-                    id: chance().ssn({ ssnFour: true, dashes: false}),
+                    id: chance().ssn({ ssnFour: true, dashes: false }),
                     label: "todoB"
                 },
 

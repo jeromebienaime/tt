@@ -1,8 +1,8 @@
 import timerReducer from "./timer"
 import todosReducer from "./todos"
-import {combineReducers} from "redux"
+import { combineReducers } from "redux"
 
 export default combineReducers({
-    timer:timerReducer,
+    timer: timerReducer,
     todos: todosReducer
 })

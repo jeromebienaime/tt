@@ -1,16 +1,16 @@
 import test from "ava"
-import {ADD_TIMER, REMOVE_TIMER, COUNT, STOP_COUNT, addTimer, removeTimer, count, stopCount} from "./timer"
+import { ADD_TIMER, REMOVE_TIMER, COUNT, STOP_COUNT, addTimer, removeTimer, count, stopCount } from "./timer"
 
 test("action type ADD_TIMER is a symbol", t =>
     t.deepEqual(ADD_TIMER, "ADD_TIMER")
 )
-test("action type REMOVE_TIMER is a symbol", t => 
+test("action type REMOVE_TIMER is a symbol", t =>
     t.deepEqual(REMOVE_TIMER, "REMOVE_TIMER")
 )
-test("action type COUNT is a symbol", t => 
+test("action type COUNT is a symbol", t =>
     t.deepEqual(COUNT, "COUNT")
 )
-test("action type STOP_COUNT is a symbol", t => 
+test("action type STOP_COUNT is a symbol", t =>
     t.deepEqual(STOP_COUNT, "STOP_COUNT")
 )
 
@@ -56,7 +56,7 @@ test("action count is a function that action type is COUNT", t => {
     t.is(result.type, COUNT)
 })
 
-test("action stopCount is a function with no payload", t=> {
+test("action stopCount is a function with no payload", t => {
     const result = stopCount()
 
     t.true(result.payload == null)

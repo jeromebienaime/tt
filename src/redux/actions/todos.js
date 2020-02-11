@@ -12,7 +12,7 @@
  *      dispatch({ type: ADD_TODO, payload: { name: "do the wishes" } })
  * ```
  */
-export const ADD_TODO = `ADD_TODO`
+export const ADD_TODO = "ADD_TODO"
 
 /** 
  * @description REMOVE_TODO actionType
@@ -22,7 +22,7 @@ export const ADD_TODO = `ADD_TODO`
  *      dispatch({ type: REMOVE_TODO, payload: { id: 1} })
  * ``` 
  * */
-export const REMOVE_TODO = `REMOVE_TODO`
+export const REMOVE_TODO = "REMOVE_TODO"
 
 /** 
  * @description NEXT_TODO actionType 
@@ -32,7 +32,7 @@ export const REMOVE_TODO = `REMOVE_TODO`
  *      dispatch({ type: NEXT_TODO , payload: { name: "do the wishes" } })
  * ```
  */
-export const NEXT_TODO = `NEXT_TODO`
+export const NEXT_TODO = "NEXT_TODO"
 
 /** 
  * @description Adds a todo to the list
@@ -42,7 +42,7 @@ export const NEXT_TODO = `NEXT_TODO`
  *      dispatch(addTodo({ name: "do the wishes" }))
  * ```
  */
-export function addTodo (payload) {
+export function addTodo(payload) {
     return {
         type: ADD_TODO,
         payload
@@ -57,7 +57,7 @@ export function addTodo (payload) {
  *      dispatch(removeTodo({ id: 1 }))
  * ```
  */
-export function removeTodo (payload) {
+export function removeTodo(payload) {
     return {
         type: REMOVE_TODO,
         payload
@@ -72,9 +72,9 @@ export function removeTodo (payload) {
  *      dispatch(nextTodo({ time: 1240 }))
  *  ```
  */
-export function nextTodo (payload) {
+export function nextTodo(payload) {
     return {
-        type: NEXT_TODO,
+        type: NEXT_TODO,
         payload
     }
 }
