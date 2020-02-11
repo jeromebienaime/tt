@@ -22,8 +22,7 @@ const App = (props) => {
             <p>Current: </p>
             {!props.todos.finished && (<><Current item={props.todos.current} /></>)}
 
-            {!props.todos.finished && <button onClick={() => props.nextTodo({ time: props.value })} >{props.todos.running ? "next" : "start"}</button>}
-            {props.todos.finished && <button onClick={() => { props.stopCount() }}>stop</button>}
+            {!props.todos.finished && <button onClick={() => props.nextTodo({ time: props.value })} >{props.todos.enabled ? "next" : "start"}</button>}
 
             <p>History:</p>
             {!_.isEmpty(props.todos.history) && <><ListWithTime list={props.todos.history} /></>}
