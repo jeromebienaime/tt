@@ -1,11 +1,12 @@
 import initialState from "../initialState"
 import * as todo from "../actions/todos"
 import _ from "lodash"
+import chance from "chance"
 
 export default function timerReducer (state = initialState, actions) {
     switch (actions.type) {
     case todo.ADD_TODO:
-        return { ...state, todos: { items: [...state.items, actions.payload] } }
+        return { ...state, items: [...state.items, { id: chance().ssn({ ssnFour: true, dashes: false }), label: actions.payload.name }] }
     case todo.REMOVE_TODO:
         return { ...state, todos: { items: state.items.filter(id => id !== actions.payload.id) } }
     case todo.NEXT_TODO:
