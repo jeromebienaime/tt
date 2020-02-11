@@ -2,6 +2,7 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/jeromebienaime/tt) 
 [![Build Status](https://travis-ci.org/jeromebienaime/tt.svg?branch=master)](https://travis-ci.org/jeromebienaime/tt)
 [![Dependencies](https://david-dm.org/jeromebienaime/tt.svg)](https://david-dm.org/jeromebienaime/tt)
+[![Coverage Status](https://coveralls.io/repos/github/jeromebienaime/tt/badge.svg)](https://coveralls.io/github/jeromebienaime/tt)
 
 # tt
 

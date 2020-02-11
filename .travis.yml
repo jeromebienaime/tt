@@ -3,12 +3,11 @@ language: node_js
 before_install:
   - yarn global add ava
   - yarn add esm
-  - yarn global add codecov
+  - yarn global add coveralls
 node_js:
   - "lts/erbium"
   - "lts/dubnium"
   - "lts/*"
 script:
   - yarn run report-coverage
-  - codecov
 cache: yarn
