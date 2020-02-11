@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from "react"
 import { connect, useDispatch } from "react-redux"
-
+import _ from "lodash"
 import { count, stopCount } from "../redux/actions/timer"
 import { nextTodo } from "../redux/actions/todos"
-import _ from "lodash"
 import ErrorBoundary from "../containers/ErrorBoundary"
 import List from "../containers/List"
 import ListWithTime from "../containers/ListWithTime"
@@ -12,18 +11,10 @@ import Timer from "../containers/Timer"
 import Current from "../containers/Current"
 
 const App = (props) => {
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        const counter = setInterval(() => {
-            dispatch(count())
-        }, 1000)
-        return () => clearInterval(counter)
-    }, [])
     return (
         <ErrorBoundary>
             <p>Timer: </p>
-            <Timer time={props.value} />
+            <Timer />
 
             <p>List:</p>
             {props.todos.items.length !== 0 && <><List list={props.todos.items} /></>}

@@ -1,6 +1,8 @@
 import chance from "chance"
 export default {
     value: 0,
+    enabled: false,
+    timeout: 1000,
     todos:
     {
         items:

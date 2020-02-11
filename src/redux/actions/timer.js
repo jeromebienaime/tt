@@ -24,6 +24,8 @@ export const ADD_TIMER = "ADD_TIMER"
  */
 export const REMOVE_TIMER = "REMOVE_TIMER"
 
+export const TOGGLE_TIMER = "TOGGLE_TIMER"
+
 /**
  * @description: Increments the timer by a value defined in the reducer, at a tick defined in the container
  * @type String
@@ -64,6 +66,13 @@ export function addTimer (payload) {
 export function removeTimer (payload) {
     return {
         type: REMOVE_TIMER,
+        payload
+    }
+}
+
+export function toggleTimer (payload) {
+    return {
+        type: TOGGLE_TIMER,
         payload
     }
 }
