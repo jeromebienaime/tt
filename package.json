@@ -7,10 +7,12 @@
   "license": "MIT",
   "scripts": {
     "start": "./node_modules/.bin/parcel src/index.html --open --no-cache",
-    "test": "./node_modules/.bin/ava --verbose",
+    "test:unit": "./node_modules/.bin/ava --verbose",
+    "test:cover": "./node_modules/.bin/nyc ./node_modules/.bin/ava",
     "lint:js": "./node_modules/.bin/eslint src/ -c ./.eslintrc.json",
     "lint:md": "./node_modules/.bin/remark .",
-    "lint": "npm run lint:js & npm run lint:md"
+    "lint": "npm run lint:js & npm run lint:md",
+    "report-coverage": "./node_modules/.bin/nyc ava --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "ava": "^3.3.0",
@@ -40,9 +42,12 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "nyx": "^0.1.0"
   },
   "remarkConfig": {
-    "plugins": ["remark-preset-lint-recommended"]
+    "plugins": [
+      "remark-preset-lint-recommended"
+    ]
   }
 }
