@@ -2,7 +2,7 @@
 import React, { useEffect } from "react"
 import { connect, useDispatch } from "react-redux"
 import _ from "lodash"
-import { count, stopCount } from "../redux/actions/timer"
+import { count } from "../redux/actions/timer"
 import { nextTodo } from "../redux/actions/todos"
 import ErrorBoundary from "../containers/ErrorBoundary"
 import List from "../containers/List"
@@ -22,8 +22,6 @@ const App = (props) => {
             <p>Current: </p>
             {!props.todos.finished && (<><Current item={props.todos.current} /></>)}
 
-            {!props.todos.finished && <button onClick={() => props.nextTodo({ time: props.value })} >{props.todos.enabled ? "next" : "start"}</button>}
-
             <p>History:</p>
             {!_.isEmpty(props.todos.history) && <><ListWithTime list={props.todos.history} /></>}
         </ErrorBoundary>
@@ -40,8 +38,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => {
     return {
         count: () => dispatch(count()),
-        nextTodo: (time) => dispatch(nextTodo(time)),
-        stopCount: () => dispatch(stopCount())
+        nextTodo: (time) => dispatch(nextTodo(time))
     }
 }
 

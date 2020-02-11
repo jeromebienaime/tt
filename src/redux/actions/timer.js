@@ -39,6 +39,7 @@ export const COUNT = "COUNT"
 /**
  * @description Stops the increment of the timer
  * @type String
+ * @deprecated
  * @example
  *  ```js
  *      dispatch({ type: STOP_COUNT }) // ie: dispatch(stopCount())
@@ -92,6 +93,7 @@ export function count () {
 /**
  * @description Stops the increment of the timer
  * @return { type: Symbol }
+ * @deprecated
  * @example
  *  ```js
  *      dispatch(stopCount())

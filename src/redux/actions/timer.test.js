@@ -7,6 +7,10 @@ test("action type ADD_TIMER is a symbol", t =>
 test("action type REMOVE_TIMER is a symbol", t =>
     t.deepEqual(actions.REMOVE_TIMER, "REMOVE_TIMER")
 )
+test("action type TOGGLE_TIMER is a symbol", t =>
+    t.deepEqual(actions.TOGGLE_TIMER, "TOGGLE_TIMER")
+)
+
 test("action type COUNT is a symbol", t =>
     t.deepEqual(actions.COUNT, "COUNT")
 )
@@ -42,6 +46,21 @@ test("action removeTimer is a function that action type is REMOVE_TIMER", t => {
     const result = actions.removeTimer(payload)
 
     t.is(result.type, actions.REMOVE_TIMER)
+})
+
+test("action toggleTimer is a function that accepts a payload", t => {
+    const payload = { enabled: true }
+
+    const result = actions.toggleTimer(payload)
+
+    t.true(result.payload.enabled)
+})
+test("action toggleTimer is a function that action type is TOGGLE_TIMER", t => {
+    const payload = { enabled: true }
+
+    const result = actions.toggleTimer(payload)
+
+    t.is(result.type, actions.TOGGLE_TIMER)
 })
 
 test("action count is a function with no payload", t => {
