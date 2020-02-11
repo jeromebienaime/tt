@@ -14,7 +14,7 @@
     "lint:md": "./node_modules/.bin/remark .",
     "lint": "yarn lint:js & yarn lint:md",
     "check": "yarn lint & yarn test ",
-    "report-coverage": "./node_modules/.bin/nyc ava --reporter=text-lcov | coveralls"
+    "report-coverage": "yarn test && ./node_modules/.bin/nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "ava": "^3.3.0",
