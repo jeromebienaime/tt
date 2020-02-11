@@ -1,6 +1,6 @@
 import React from "react"
-import { connect, useDispatch} from "react-redux"
-import { useEffect, useRef, useState  } from "react"
+import { connect, useDispatch } from "react-redux"
+import { useEffect, useRef, useState } from "react"
 import { count, stopCount } from "../redux/actions/timer"
 import { nextTodo } from "../redux/actions/todos"
 import _ from "lodash"
@@ -12,7 +12,7 @@ import Current from "../containers/Current"
 
 const App = (props) => {
     const dispatch = useDispatch()
-  
+
     useEffect(() => {
         const counter = setInterval(() => {
             dispatch(count())
@@ -30,8 +30,8 @@ const App = (props) => {
             <p>Current: </p>
             {!props.todos.finished && (<><Current item={props.todos.current} /></>)}
 
-            {!props.todos.finished &&  <button onClick={() => props.nextTodo({time: props.value})} >{props.todos.running ? "next": "start"}</button>}
-            {props.todos.finished && <button onClick={() => { clearInterval(counter); props.stopCount()} }>stop</button>}
+            {!props.todos.finished && <button onClick={() => props.nextTodo({ time: props.value })} >{props.todos.running ? "next" : "start"}</button>}
+            {props.todos.finished && <button onClick={() => { clearInterval(counter); props.stopCount() }}>stop</button>}
 
 
             <p>History:</p>

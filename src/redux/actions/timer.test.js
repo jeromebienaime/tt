@@ -1,68 +1,67 @@
 import test from "ava"
-import { ADD_TIMER, REMOVE_TIMER, COUNT, STOP_COUNT, addTimer, removeTimer, count, stopCount } from "./timer"
+import * as actions from "./timer"
 
 test("action type ADD_TIMER is a symbol", t =>
-    t.deepEqual(ADD_TIMER, "ADD_TIMER")
+    t.deepEqual(actions.ADD_TIMER, "ADD_TIMER")
 )
 test("action type REMOVE_TIMER is a symbol", t =>
-    t.deepEqual(REMOVE_TIMER, "REMOVE_TIMER")
+    t.deepEqual(actions.REMOVE_TIMER, "REMOVE_TIMER")
 )
 test("action type COUNT is a symbol", t =>
-    t.deepEqual(COUNT, "COUNT")
+    t.deepEqual(actions.COUNT, "COUNT")
 )
 test("action type STOP_COUNT is a symbol", t =>
-    t.deepEqual(STOP_COUNT, "STOP_COUNT")
+    t.deepEqual(actions.STOP_COUNT, "STOP_COUNT")
 )
-
 
 test("action addTimer is a function that accepts a payload", t => {
     const payload = { id: 1 }
 
-    const result = addTimer(payload)
+    const result = actions.addTimer(payload)
 
     t.is(result.payload.id, 1)
 })
 test("action addTimer is a function that action type is ADD_TIMER", t => {
     const payload = { id: 1 }
 
-    const result = addTimer(payload)
+    const result = actions.addTimer(payload)
 
-    t.is(result.type, ADD_TIMER)
+    t.is(result.type, actions.ADD_TIMER)
 })
 
 test("action removeTimer is a function that accepts a payload", t => {
     const payload = { id: 1 }
 
-    const result = removeTimer(payload);
+    const result = actions.removeTimer(payload)
 
     t.is(result.payload.id, 1)
 })
 test("action removeTimer is a function that action type is REMOVE_TIMER", t => {
     const payload = { id: 1 }
 
-    const result = removeTimer(payload)
+    const result = actions.removeTimer(payload)
 
-    t.is(result.type, REMOVE_TIMER)
+    t.is(result.type, actions.REMOVE_TIMER)
 })
 
 test("action count is a function with no payload", t => {
-    const result = count()
+    const result = actions.count()
 
     t.true(result.payload == null)
 })
 test("action count is a function that action type is COUNT", t => {
-    const result = count()
+    const result = actions.count()
 
-    t.is(result.type, COUNT)
+    t.is(result.type, actions.COUNT)
 })
 
 test("action stopCount is a function with no payload", t => {
-    const result = stopCount()
+    const result = actions.stopCount()
 
     t.true(result.payload == null)
 })
 test("action stopCount is a function that action type is STOP_COUNT", t => {
-    const result = stopCount()
+    const result = actions.stopCount()
 
-    t.is(result.type, STOP_COUNT)
+    t.is(result.type, actions.STOP_COUNT)
 })

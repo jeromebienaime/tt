@@ -1,20 +1,20 @@
 /**
  *  @file redux/actions/timer.js
  *  @test redux/actions/timer.test.js
- *  @description Defines the actions to manage the timer 
+ *  @description Defines the actions to manage the timer
  */
 
-/** 
+/**
  * @description ADD_TIMER actionType.
  * @type String
- * @example 
+ * @example
  *  ```js
  *      dispatch({ type: ADD_TIMER, payload: { timer: 0 } }) // ie: dispatch(addTimer({timer: 0}))
  *  ```
  */
 export const ADD_TIMER = "ADD_TIMER"
 
-/** 
+/**
  * @description REMOVE_TIMER actionType.
  * @type String
  * @example
@@ -24,7 +24,7 @@ export const ADD_TIMER = "ADD_TIMER"
  */
 export const REMOVE_TIMER = "REMOVE_TIMER"
 
-/** 
+/**
  * @description: Increments the timer by a value defined in the reducer, at a tick defined in the container
  * @type String
  * @example
@@ -49,7 +49,7 @@ export const STOP_COUNT = "STOP_COUNT"
  * @TODO #1 add a list of timer so we can measure different things in parrallel
  * @param {JSON} payload - new timer
  */
-export function addTimer(payload) {
+export function addTimer (payload) {
     return {
         type: ADD_TIMER,
         payload
@@ -61,7 +61,7 @@ export function addTimer(payload) {
  * @TODO #1
  * @param {JSON} payload - old timer
  */
-export function removeTimer(payload) {
+export function removeTimer (payload) {
     return {
         type: REMOVE_TIMER,
         payload
@@ -70,13 +70,13 @@ export function removeTimer(payload) {
 
 /**
  * @description Increments the timer by a value defined in the reducer at a tick defined in the container
- * @return { type: Symbol } 
+ * @return { type: Symbol }
  * @example
  *  ```js
  *      dispatch(count())
  *  ```
  */
-export function count() {
+export function count () {
     return {
         type: COUNT
     }
@@ -84,13 +84,13 @@ export function count() {
 
 /**
  * @description Stops the increment of the timer
- * @return { type: Symbol }
+ * @return { type: Symbol }
  * @example
  *  ```js
  *      dispatch(stopCount())
  * ```
  */
-export function stopCount() {
+export function stopCount () {
     return {
         type: STOP_COUNT
     }

@@ -1,7 +1,7 @@
 import React from "react"
 
 
-const Current = ({item}) => (
+const Current = ({ item }) => (
     <>
         <p>{item.label}</p>
     </>

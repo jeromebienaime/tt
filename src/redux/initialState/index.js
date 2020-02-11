@@ -14,11 +14,12 @@ export default {
                 }, {
                     id: chance().ssn({ ssnFour: true, dashes: false }),
                     label: "todoB"
-                },
+                }
 
             ],
         current: {},
-        running: false, finished: false,
+        running: false,
+        finished: false,
         history: []
     }
 }

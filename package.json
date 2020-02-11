@@ -7,7 +7,10 @@
   "license": "MIT",
   "scripts": {
     "start": "./node_modules/.bin/parcel src/index.html --open --no-cache",
-    "test": "./node_modules/.bin/ava --verbose"
+    "test": "./node_modules/.bin/ava --verbose",
+    "lint:js": "./node_modules/.bin/eslint src/ -c ./.eslintrc.json",
+    "lint:md": "./node_modules/.bin/remark .",
+    "lint": "npm run lint:js & npm run lint:md"
   },
   "dependencies": {
     "ava": "^3.3.0",
@@ -21,7 +24,9 @@
     "reduce-reducers": "^1.0.4",
     "redux": "^2.0.0 || ^3.0.0 || ^4.0.0-0",
     "redux-diff-logger": "^0.0.9",
-    "redux-logger": "^3.0.6"
+    "redux-logger": "^3.0.6",
+    "remark-cli": "^7.0.1",
+    "remark-preset-lint-recommended": "^3.0.3"
   },
   "ava": {
     "require": [
@@ -36,5 +41,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-standard": "^4.0.1"
+  },
+  "remarkConfig": {
+    "plugins": ["remark-preset-lint-recommended"]
   }
 }

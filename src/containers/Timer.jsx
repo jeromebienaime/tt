@@ -1,7 +1,7 @@
 import React from "react"
 
 
-const Timer = ({time}) => (
+const Timer = ({ time }) => (
     <>
         {time}
     </>
