@@ -77,9 +77,7 @@ export function removeTimer (payload) {
  *  ```
  */
 export function count () {
-    return {
-        type: COUNT
-    }
+    return { type: COUNT }
 }
 
 /**
@@ -91,7 +89,5 @@ export function count () {
  * ```
  */
 export function stopCount () {
-    return {
-        type: STOP_COUNT
-    }
+    return { type: STOP_COUNT }
 }

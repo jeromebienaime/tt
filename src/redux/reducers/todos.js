@@ -1,14 +1,14 @@
 import initialState from "../initialState"
-import { ADD_TODO, REMOVE_TODO, NEXT_TODO } from "../actions/todos"
+import * as todo from "../actions/todos"
 import _ from "lodash"
 
 export default function timerReducer (state = initialState, actions) {
     switch (actions.type) {
-    case ADD_TODO:
+    case todo.ADD_TODO:
         return { ...state, todos: { items: [...state.items, actions.payload] } }
-    case REMOVE_TODO:
+    case todo.REMOVE_TODO:
         return { ...state, todos: { items: state.items.filter(id => id !== actions.payload.id) } }
-    case NEXT_TODO:
+    case todo.NEXT_TODO:
         return {
             ...state,
             items: _.initial(state.items) ? _.initial(state.items) : [],
