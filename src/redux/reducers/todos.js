@@ -8,7 +8,7 @@ export default function timerReducer (state = initialState, actions) {
     case todo.ADD_TODO:
         return { ...state, items: [...state.items, { id: chance().ssn({ ssnFour: true, dashes: false }), label: actions.payload.name }] }
     case todo.REMOVE_TODO:
-        return { ...state, todos: { items: state.items.filter(id => id !== actions.payload.id) } }
+        return { ...state, items: state.items.filter(({ id }) => id !== actions.payload.id) }
     case todo.NEXT_TODO:
         return {
             ...state,
