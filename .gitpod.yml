@@ -1,8 +1,12 @@
 tasks:
-  - init: npm install
+  - init: yarn install
+  - command: yarn serve
 image:
   file: .gitpod.Dockerfile
 
 vscode:
   extensions:
     - dbaeumer.vscode-eslint@2.0.15:/v3eRFwBI38JLZJv5ExY5g==
+ports:
+  - port: 1234
+    onOpen: open-preview
