@@ -14,6 +14,10 @@
  */
 export const ADD_TODO = "ADD_TODO"
 
+export const TOGGLE_EDIT_TODO = "TOGGLE_EDIT_TODO"
+
+export const EDIT_TODO = "EDIT_TODO"
+
 /**
  * @description REMOVE_TODO actionType
  * @type String
@@ -48,6 +52,21 @@ export function addTodo (payload) {
         payload
     }
 }
+
+export function toggleEditTodo (payload) {
+    return {
+        type: TOGGLE_EDIT_TODO,
+        payload
+    }
+}
+
+export function editTodo (payload) {
+    return {
+        type: EDIT_TODO,
+        payload
+    }
+}
+
 
 /**
  * @description Removes a todo from the list

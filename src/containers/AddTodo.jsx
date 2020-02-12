@@ -3,13 +3,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import * as todos from "../redux/actions/todos"
-
-const onEnter = (callback) => (event) => {
-    if (event.key === "Enter") {
-        callback(event.target.value)
-        event.target.value = ""
-    }
-}
+import onEnter from "../services/keyboard.onEnter"
 
 const AddTodo = (props) => {
     return (

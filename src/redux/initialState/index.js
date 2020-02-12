@@ -9,13 +9,16 @@ export default {
             [
                 {
                     id: chance().ssn({ ssnFour: true, dashes: false }),
-                    label: "todo"
+                    label: "todo",
+                    editing: false
                 }, {
                     id: chance().ssn({ ssnFour: true, dashes: false }),
-                    label: "todoA"
+                    label: "todoA",
+                    editing: false
                 }, {
                     id: chance().ssn({ ssnFour: true, dashes: false }),
-                    label: "todoB"
+                    label: "todoB",
+                    editing: false
                 }
 
             ],
