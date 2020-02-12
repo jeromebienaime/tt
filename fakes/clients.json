@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "id": "34534", 
+            "companyName": "client D",
+            "contact": {
+                "firstName": "John",
+                "lastName": "myAPI",
+                "gender": "M"
+            },
+            "userName": "JMyApi",
+            "password": "bc-password",
+            "createdAt": "2020-02-12 15:59:00"
+        }
+    ]
+}

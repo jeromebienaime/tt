@@ -24,7 +24,7 @@ const List = (props) => (
 const mapDispatchToProps = (dispatch) => ({
     removeTodo: (id) => dispatch(todos.removeTodo({ id })),
     toggleEditTodo: (id) => dispatch(todos.toggleEditTodo({ id })),
-    editTodo: (id) => name =>  dispatch(todos.editTodo({ id, name }))
+    editTodo: (id) => name => dispatch(todos.editTodo({ id, name }))
 })
 
 export default connect(state => state, mapDispatchToProps)(List)

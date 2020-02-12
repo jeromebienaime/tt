@@ -14,15 +14,23 @@
     "lint:md": "./node_modules/.bin/remark .",
     "lint": "yarn lint:js & yarn lint:md",
     "check": "yarn lint & yarn test ",
-    "report-coverage": "yarn test && ./node_modules/.bin/nyc report --reporter=text-lcov | coveralls"
+    "report-coverage": "yarn test && ./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
+    "api:fake": "./node_modules/.bin/json-server --watch fakes/clients.json"
   },
+  "browserslist": [
+    "last 3 Chrome versions"
+  ],
   "dependencies": {
     "ava": "^3.3.0",
+    "axios": "^0.19.2",
     "chance": "^1.1.4",
     "esm": "^3.2.25",
+    "json-server": "^0.16.0",
+    "lod": "^0.1.0",
     "luxon": "^1.22.0",
     "nyc": "^15.0.0",
     "parcel": "^1.12.4",
+    "password-generator": "^2.2.3",
     "react": "^16.8.3",
     "react-dom": "^16.12.0",
     "react-interval": "^2.1.1",
@@ -31,6 +39,7 @@
     "redux": "^2.0.0 || ^3.0.0 || ^4.0.0-0",
     "redux-diff-logger": "^0.0.9",
     "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "remark-cli": "^7.0.1",
     "remark-preset-lint-recommended": "^3.0.3"
   },

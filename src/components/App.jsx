@@ -10,6 +10,8 @@ import ListWithTime from "../containers/ListWithTime"
 import Timer from "../containers/Timer"
 import Current from "../containers/Current"
 import AddTodo from "../containers/AddTodo"
+import ClientList from "../containers/ClientList"
+import { fetchClientInit } from "../redux/actions/clients"
 
 const App = (props) => {
     return (
@@ -27,6 +29,10 @@ const App = (props) => {
 
             <p>History:</p>
             {!_.isEmpty(props.todos.history) && <><ListWithTime list={props.todos.history} /></>}
+
+            <p>Clients:</p>
+            <button onClick={() => props.fetchClientInit()}>fetch</button>
+            <ClientList list={props.clients.items} />
         </ErrorBoundary>
     )
 }
@@ -35,13 +41,15 @@ const mapStateToProps = (state) => ({
     value: state.timer.value,
     timer: state.timer,
     running: state.timer.running,
-    todos: state.todos
+    todos: state.todos,
+    clients: state.clients
 })
 
 const mapDispatchToProps = (dispatch) => {
     return {
         count: () => dispatch(count()),
-        nextTodo: (time) => dispatch(nextTodo(time))
+        nextTodo: (time) => dispatch(nextTodo(time)),
+        fetchClientInit: () => dispatch(fetchClientInit())
     }
 }
 
