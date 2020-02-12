@@ -4,9 +4,35 @@ import password from "password-generator"
 const createPassword = () => password(10, false, null, "bc-")
 
 export default {
-    value: 0,
-    enabled: false,
-    timeout: 1000,
+    timer: {
+        value: 0,
+        enabled: false,
+        timeout: 1000
+    },
+    projects: {
+        items: [
+            {
+                id: chance().ssn(),
+                name: "Projet de test",
+                createdAt: new Date(),
+                budget: {
+                    type: "DIVIDED_MONTH",
+                    ratePerHour: 50,
+                    taxes: 20.6
+                },
+                duration: {
+                    history: [
+                        {
+                            from: "2020-01-01 00:00:00",
+                            to: "2020-01-31 00:00:00",
+                            total: "P3H30"
+                        }
+                    ]
+                },
+                description: ""
+            }
+        ]
+    },
     clients: {
         init: false,
         loading: false,
