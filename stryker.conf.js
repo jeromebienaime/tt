@@ -6,12 +6,15 @@ module.exports = function (config) {
         mutator: "javascript",
         // testRunner: "jest",
         reporters: ["progress", "clear-text", "html", "dashboard"],
-        coverageAnalysis: "off",
+        coverageAnalysis: "perTest",
         jest: {
             projectType: "react"
         },
         commandRunner: {
             command: "yarn test:unit" // optionally choose a different command to run
+        },
+        dashboard: {
+            reportType: "full"
         }
     })
 }

@@ -5,6 +5,7 @@
 [![Dependencies](https://david-dm.org/jeromebienaime/tt.svg)](https://david-dm.org/jeromebienaime/tt)
 [![Coverage Status](https://coveralls.io/repos/github/jeromebienaime/tt/badge.svg)](https://coveralls.io/github/jeromebienaime/tt)
 [![Greenkeeper badge](https://badges.greenkeeper.io/jeromebienaime/tt.svg)](https://greenkeeper.io/)
+
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fjeromebienaime%2Ftt%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/jeromebienaime/tt/master)
 
 # tt
