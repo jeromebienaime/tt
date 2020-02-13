@@ -9,6 +9,7 @@
     "start": "./node_modules/.bin/parcel src/index.html --open --no-cache",
     "test:unit": "./node_modules/.bin/ava --verbose",
     "test:cover": "./node_modules/.bin/nyc ./node_modules/.bin/ava",
+    "test:mutation": "./node_modules/.bin/stryker run",
     "test:vulnerable": "./node_modules/.bin/snyk monitor",
     "test": "yarn test:unit && yarn test:cover",
     "lint:js": "./node_modules/.bin/eslint src/ -c ./.eslintrc.json",
@@ -43,7 +44,8 @@
     "redux-thunk": "^2.3.0",
     "remark-cli": "^7.0.1",
     "remark-preset-lint-recommended": "^3.0.3",
-    "snyk": "^1.291.0"
+    "snyk": "^1.291.0",
+    "stryker-cli": "^1.0.0"
   },
   "ava": {
     "require": [
@@ -51,6 +53,10 @@
     ]
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^2.5.0",
+    "@stryker-mutator/html-reporter": "^2.5.0",
+    "@stryker-mutator/javascript-mutator": "^2.5.0",
+    "@stryker-mutator/jest-runner": "^2.5.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",

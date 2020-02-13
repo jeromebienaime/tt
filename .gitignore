@@ -10,6 +10,8 @@ yarn.lock
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# stryker mutation reports
+reports/
 
 # Runtime data
 pids
@@ -108,3 +110,6 @@ dist
 .theia
 
 .secret/
+
+# stryker temp files
+.stryker-tmp
