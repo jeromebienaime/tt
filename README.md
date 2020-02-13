@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/jeromebienaime/tt.svg?branch=master)](https://travis-ci.org/jeromebienaime/tt)
 [![Dependencies](https://david-dm.org/jeromebienaime/tt.svg)](https://david-dm.org/jeromebienaime/tt)
 [![Coverage Status](https://coveralls.io/repos/github/jeromebienaime/tt/badge.svg)](https://coveralls.io/github/jeromebienaime/tt)
+[![Greenkeeper](https://badges.greenkeeper.io/owner/repo.svg)][]
 
 # tt
 

@@ -9,6 +9,7 @@
     "start": "./node_modules/.bin/parcel src/index.html --open --no-cache",
     "test:unit": "./node_modules/.bin/ava --verbose",
     "test:cover": "./node_modules/.bin/nyc ./node_modules/.bin/ava",
+    "test:vulnerable": "./node_modules/.bin/snyk monitor",
     "test": "yarn test:unit && yarn test:cover",
     "lint:js": "./node_modules/.bin/eslint src/ -c ./.eslintrc.json",
     "lint:md": "./node_modules/.bin/remark .",
@@ -41,7 +42,8 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "remark-cli": "^7.0.1",
-    "remark-preset-lint-recommended": "^3.0.3"
+    "remark-preset-lint-recommended": "^3.0.3",
+    "snyk": "^1.291.0"
   },
   "ava": {
     "require": [
