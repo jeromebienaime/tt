@@ -5,8 +5,8 @@ module.exports = function (config) {
         mutate: ["src/**/*.js?(x)", "!src/**/*@(.test|.spec|Spec).js?(x)"],
         mutator: "javascript",
         // testRunner: "jest",
-        reporters: ["progress", "clear-text", "html", "dashboard"],
-        coverageAnalysis: "perTest",
+        reporters: ["progress", "clear-text", "html"],
+        // coverageAnalysis: "perTest",
         jest: {
             projectType: "react"
         },

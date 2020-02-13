@@ -3,7 +3,8 @@
  *  @test redux/actions/client.test.js
  *  @description Defines the actions to manage clients
  */
-import axios from "axios"
+
+import Axios from "axios"
 
 export const ADD_CLIENT = "ADD_CLIENT"
 export const REMOVE_CLIENT = "REMOVE_CLIENT"
@@ -21,10 +22,26 @@ export function addClient (payload) {
         payload
     }
 }
+
+export function removeClient (payload) {
+    return {
+        type: REMOVE_CLIENT,
+        payload
+    }
+}
+
+export function editClient (payload) {
+    return {
+        type: EDIT_CLIENT,
+        payload
+    }
+}
 export function fetchClientInit (payload) {
     return dispatch => {
         dispatch(fetchClientRunning)
-        axios.get("https://3000-ee3a291c-1bfc-4163-90a5-fa09a6cbe864.ws-eu01.gitpod.io/items")
+        const url = payload.url
+            ? payload.url : "https://3000-ee3a291c-1bfc-4163-90a5-fa09a6cbe864.ws-eu01.gitpod.io/items"
+        return Axios.get(url)
             .then(result => dispatch(fetchClientSuccess({ items: result.data })))
             .catch(e => dispatch(fetchClientError({ error: e })))
     }

@@ -67,7 +67,6 @@ export function editTodo (payload) {
     }
 }
 
-
 /**
  * @description Removes a todo from the list
  * @param {JSON} payload - old todo
