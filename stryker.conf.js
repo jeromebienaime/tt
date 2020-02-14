@@ -7,14 +7,15 @@ module.exports = function (config) {
         // testRunner: "jest",
         reporters: ["progress", "clear-text", "html"],
         // coverageAnalysis: "perTest",
-        jest: {
+        /* jest: {
             projectType: "react"
-        },
+        }, */
         commandRunner: {
             command: "yarn test:unit" // optionally choose a different command to run
         },
         dashboard: {
             reportType: "full"
-        }
+        },
+        loglevel: "all"
     })
 }

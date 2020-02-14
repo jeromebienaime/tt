@@ -1,4 +1,4 @@
-import clients from "./clients"
+import clients from "./clients.validator"
 import test from "ava"
 import jsen from "jsen"
 import chance from "chance"

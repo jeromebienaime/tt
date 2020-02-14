@@ -1,4 +1,4 @@
-import projects from "./projects"
+import projects from "./projects.validator"
 import test from "ava"
 import jsen from "jsen"
 import chance from "chance"
