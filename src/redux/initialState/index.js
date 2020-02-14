@@ -59,7 +59,7 @@ export default {
                     gender: "M"
                 },
                 userName: "JLCostes",
-                URL: "jeanlouiscostes.fr",
+                URL: "http://jeanlouiscostes.fr",
                 password: createPassword(),
                 createdAt: new Date()
             },

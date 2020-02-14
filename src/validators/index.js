@@ -1,9 +1,9 @@
 import jsen from "jsen"
 
-import timer from "./timer"
-import projects from "./projects"
-import clients from "./clients"
-import todos from "./todos"
+import timer from "./timer.validator"
+import projects from "./projects.validator"
+import clients from "./clients.validator"
+import todos from "./todos.validator"
 
 export default jsen({
     type: "object",

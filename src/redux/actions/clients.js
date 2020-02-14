@@ -36,7 +36,7 @@ export function editClient (payload) {
 export function fetchClientInit (payload) {
     return dispatch => {
         dispatch(fetchClientRunning)
-        const url = payload.url
+        const url = payload && payload.url
             ? payload.url : "https://3000-ee3a291c-1bfc-4163-90a5-fa09a6cbe864.ws-eu01.gitpod.io/items"
         return Axios.get(url)
             .then(result => dispatch(fetchClientSuccess({ items: result.data })))
