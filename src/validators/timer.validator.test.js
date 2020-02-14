@@ -1,4 +1,4 @@
-import timer from "./timer"
+import timer from "./timer.validator"
 import test from "ava"
 import jsen from "jsen"
 
