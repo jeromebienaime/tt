@@ -24,10 +24,7 @@ export function addClient (payload) {
 }
 
 export function removeClient (payload) {
-    return {
-        type: REMOVE_CLIENT,
-        payload
-    }
+    return { type: REMOVE_CLIENT, payload }
 }
 
 export function editClient (payload) {

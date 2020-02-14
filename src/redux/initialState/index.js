@@ -1,7 +1,5 @@
 import chance from "chance"
 import password from "password-generator"
-// https://github.com/paularmstrong/normalizr
-// to kill mutation monkeys
 
 const createPassword = () => password(10, false, null, "bc-")
 

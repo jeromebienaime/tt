@@ -98,7 +98,7 @@ test("action fetchClientSuccess is a function that accepts a payload", t => {
 })
 
 test("action fetchClientSuccess is a function that type is FETCH_CLIENT_SUCCESS", t => {
-    const payload = { items: [{ name: "Client_A", id: 9642 }, { name: "Client_B", id: 8741 }, { name: "Client_C", id: 87987 }] }
+    const payload = { items: [{ name: "Client_D", id: 9642 }, { name: "Client_E", id: 8741 }, { name: "Client_F", id: 87987 }] }
 
     const result = actions.fetchClientSuccess(payload)
 
