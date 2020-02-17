@@ -17,7 +17,9 @@
     "lint": "yarn lint:js & yarn lint:md",
     "check": "yarn lint & yarn test ",
     "report-coverage": "yarn test && ./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
-    "api:fake": "./node_modules/.bin/json-server --watch fakes/clients.json"
+    "api:fake": "./node_modules/.bin/json-server --watch fakes/clients.json",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook"
   },
   "browserslist": [
     "last 3 Chrome versions"
@@ -27,6 +29,7 @@
     "axios": "^0.19.2",
     "chance": "^1.1.4",
     "esm": "^3.2.25",
+    "faker": "^4.1.0",
     "jsen": "^0.6.6",
     "json-server": "^0.16.0",
     "lod": "^0.1.0",
@@ -56,6 +59,11 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.3.13",
+    "@storybook/addon-links": "^5.3.13",
+    "@storybook/addons": "^5.3.13",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.13",
     "@stryker-mutator/core": "^2.5.0",
     "@stryker-mutator/html-reporter": "^2.5.0",
     "@stryker-mutator/javascript-mutator": "^2.5.0",

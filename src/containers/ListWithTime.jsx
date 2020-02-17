@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import Interval from 'luxon/src/interval.js'
+import Interval from "luxon/src/interval.js"
 import React from "react"
 
 const List = ({ list }) => (

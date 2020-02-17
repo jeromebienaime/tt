@@ -4,7 +4,7 @@ import { connect } from "react-redux"
 import * as todos from "../redux/actions/todos"
 import onEnter from "../services/keyboard.onEnter"
 
-const List = (props) => (
+export const List = (props) => (
     <ul>
         {props.list.length && props.list.map(item =>
             <li key={item.id}>
