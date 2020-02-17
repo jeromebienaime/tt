@@ -5,7 +5,7 @@
  */
 
 /**
- * @description ADD_TODO actionType.
+ * @description ADD_TODO actionType
  * @type String
  * @example
  * ```js
@@ -14,8 +14,24 @@
  */
 export const ADD_TODO = "ADD_TODO"
 
+/**
+ * @description TOGGLE_EDIT_TODO actionType
+ * @type String
+ * @example
+ * ```js
+ *      dispatch({ type: TOGGLE_EDIT_TODO, payload: { enabled: true } })
+ * ```
+ */
 export const TOGGLE_EDIT_TODO = "TOGGLE_EDIT_TODO"
 
+/**
+ * @description EDIT_TODO actionType
+ * @type String
+ * @example
+ * ```js
+ *      dispatch({ type: EDIT_TODO, payload: { id: 4685, label: "do the laundry" } })
+ * ```
+ */
 export const EDIT_TODO = "EDIT_TODO"
 
 /**
@@ -53,6 +69,14 @@ export function addTodo (payload) {
     }
 }
 
+/**
+ * @description Enable or disable the edit of a todo
+ * @param {JSON} payload - enabled?
+ * @example
+ * ```js
+ *      dispatch(toggleEditTodo({ enabled: false }))
+ * ```
+ */
 export function toggleEditTodo (payload) {
     return {
         type: TOGGLE_EDIT_TODO,
@@ -60,6 +84,14 @@ export function toggleEditTodo (payload) {
     }
 }
 
+/**
+ * @description Edit a todo
+ * @param {JSON} payload
+ * @example
+ * ```js
+ *      dispatch(editTodo({ id: 2315, label: "Do it" }))
+ * ```
+ */
 export function editTodo (payload) {
     return {
         type: EDIT_TODO,
