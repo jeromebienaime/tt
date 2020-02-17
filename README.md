@@ -9,6 +9,4 @@
 
 # tt
 
-[logo]
-
 _tt_ is short for task timetracker. 

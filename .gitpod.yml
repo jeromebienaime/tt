@@ -7,6 +7,12 @@ image:
 vscode:
   extensions:
     - dbaeumer.vscode-eslint@2.0.15:/v3eRFwBI38JLZJv5ExY5g==
-ports:
+    - drewbourne.vscode-remark-lint@1.0.0:gZtn2LnlEAVO0yhiOTLHxA==ports:
   - port: 1234
     onOpen: open-preview
+vscode:
+  extensions:
+    - drewbourne.vscode-remark-lint@1.0.0:gZtn2LnlEAVO0yhiOTLHxA==
+vscode:
+  extensions:
+    - esbenp.prettier-vscode@3.20.0:37/f4uBlE287wUjENFq1aA==

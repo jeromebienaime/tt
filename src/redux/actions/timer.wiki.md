@@ -18,8 +18,9 @@ interface ITimer {
 }
 ```
 
-+ The method ``count()`` will start the timer
-+ The method ``stopCount()`` will stop the timer
++   The method ``count()`` will start the timer
+
++   The method ``stopCount()`` will stop the timer
 
 To use timer, here is a basic react.js component that will render it:
 
