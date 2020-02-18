@@ -1,12 +1,25 @@
+/**
+ * @file redux/reducers/timer.js
+ * @test redux/reducers/timer.test.js
+ * @description Reduce the timer part of the state given action type
+ * 
+ */
 import initialState from "../initialState"
 import * as timer from "../actions/timer"
 import is from "is_js"
 
+/**
+ * 
+ * @param {JSON[default=initialState]} state - valid timer 
+ * @param {JSON[default={}]} actions - action type and optional payload
+ * @return {JSON} state reduced
+ */
 export default function timerReducer (state = initialState, actions = {}) {
     if (state == null) {
         state = initialState
     }
     if (is.undefined(actions.type)) {
+        /** @TODO format error */
         return {...state, error: "timerReducer actions.type actions has no type" }
     }
     switch (actions.type) {
