@@ -6,20 +6,24 @@
   "author": "jeromebienaime <jerome.bienaime@bulle-communication.com>",
   "license": "MIT",
   "scripts": {
-    "start": "./node_modules/.bin/parcel src/index.html --open --no-cache",
+    "start": "yarn serve:front",
     "test:unit": "./node_modules/.bin/ava --verbose",
     "test:cover": "./node_modules/.bin/nyc ./node_modules/.bin/ava",
     "test:mutation": "./node_modules/.bin/stryker run",
     "test:vulnerable": "./node_modules/.bin/snyk monitor",
+    "test:report:coverage": "yarn test && ./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
+    "test:api:unit": "./api/vendor/bin/phpunit -c ./api/phpunit.xml",
     "test": "yarn test:unit && yarn test:cover",
     "lint:js": "./node_modules/.bin/eslint src/ -c ./.eslintrc.json",
     "lint:md": "./node_modules/.bin/remark .",
     "lint": "yarn lint:js & yarn lint:md",
     "check": "yarn lint & yarn test ",
-    "report-coverage": "yarn test && ./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
-    "api:fake": "./node_modules/.bin/json-server --watch fakes/clients.json",
-    "storybook": "start-storybook -p 9009",
-    "build-storybook": "build-storybook"
+    "serve:front": "./node_modules/.bin/parcel src/index.html --open --no-cache",
+    "serve:api:fake": "./node_modules/.bin/json-server --watch fakes/clients.json",
+    "serve:api": "php -S localhost:8080 -t api/public",
+    "serve:storybook": "start-storybook -p 9009",
+    "build:storybook": "build-storybook",
+    "generate:app:key": "./node_modules/.bin/password-generator -l 32"
   },
   "browserslist": [
     "last 3 Chrome versions"

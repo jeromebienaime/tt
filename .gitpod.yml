@@ -1,6 +1,8 @@
 tasks:
   - init: yarn install
   - command: yarn serve
+  - command: php -S localhost:8000 -t api/public
+
 image:
   file: .gitpod.Dockerfile
 

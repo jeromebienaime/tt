@@ -22,7 +22,8 @@ test("clients schema should be correct when values provided are correct", t => {
                 userName: "CRigole",
                 URL: "http://convergence-evolution.com",
                 password: createPassword(),
-                createdAt: new Date()
+                createdAt: new Date(),
+                active: false
             }
         ]
     }

@@ -31,7 +31,8 @@ export default {
                         lastName: { type: "string", minLength: 2, maxLength: 200 },
                         gender: { enum: ["M", "F", "ND"] }
                     },
-                    URL: { format: "uri" }
+                    URL: { format: "uri" },
+                    active: { type: "boolean", default: false }
                 }
 
             }
