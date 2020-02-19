@@ -12,7 +12,7 @@
     "test:mutation": "./node_modules/.bin/stryker run",
     "test:vulnerable": "./node_modules/.bin/snyk monitor",
     "test:report:coverage": "yarn test && ./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
-    "test:api:unit": "./api/vendor/bin/phpunit -c ./api/phpunit.xml",
+    "test:api:unit": "",
     "test": "yarn test:unit && yarn test:cover && yarn test:api:unit",
     "lint:js": "./node_modules/.bin/eslint src/ -c ./.eslintrc.json",
     "lint:md": "./node_modules/.bin/remark .",
