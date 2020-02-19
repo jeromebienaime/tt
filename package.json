@@ -12,7 +12,8 @@
     "test:mutation": "./node_modules/.bin/stryker run",
     "test:vulnerable": "./node_modules/.bin/snyk monitor",
     "test:report:coverage": "yarn test && ./node_modules/.bin/nyc report --reporter=text-lcov | coveralls",
-    "test:api:unit": "",
+    "test:api:unit": "./node_modules/.bin/ts-node ./node_modules/.bin/tape api/src/**/**.test.ts | node_modules/.bin/tap-spec",
+    "test:api:cover": "./node_modules/.bin/nyc yarn test:api:unit",
     "test": "yarn test:unit && yarn test:cover && yarn test:api:unit",
     "lint:js": "./node_modules/.bin/eslint src/ -c ./.eslintrc.json",
     "lint:md": "./node_modules/.bin/remark .",
@@ -29,9 +30,15 @@
     "last 3 Chrome versions"
   ],
   "dependencies": {
+    "@types/faker": "^4.1.9",
+    "@types/lodash": "^4.14.149",
+    "@types/password-hash": "^1.2.20",
+    "@types/tape": "^4.2.34",
     "ava": "^3.3.0",
     "axios": "^0.19.2",
     "chance": "^1.1.4",
+    "dayjs": "^1.8.20",
+    "dot-prop": "^5.1.1",
     "esm": "^3.2.25",
     "faker": "^4.1.0",
     "is_js": "^0.9.0",
@@ -43,6 +50,7 @@
     "nyc": "^15.0.0",
     "parcel": "^1.12.4",
     "password-generator": "^2.2.3",
+    "password-hash": "^1.2.2",
     "react": "^16.8.3",
     "react-dom": "^16.12.0",
     "react-interval": "^2.1.1",
@@ -54,10 +62,14 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "remark-cli": "^7.0.1",
-    "dot-prop": "^5.1.1",
     "remark-preset-lint-recommended": "^3.0.3",
+    "restify": "^8.5.1",
     "snyk": "^1.291.0",
-    "stryker-cli": "^1.0.0"
+    "stryker-cli": "^1.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.13.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
   },
   "ava": {
     "require": [
