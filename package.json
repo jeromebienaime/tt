@@ -33,7 +33,7 @@
     "@types/faker": "^4.1.9",
     "@types/lodash": "^4.14.149",
     "@types/password-hash": "^1.2.20",
-    "@types/tape": "^4.2.34",
+    "@types/tape": "^4.13.0",
     "ava": "^3.3.0",
     "axios": "^0.19.2",
     "chance": "^1.1.4",
