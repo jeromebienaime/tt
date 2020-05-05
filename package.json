@@ -64,7 +64,7 @@
     "remark-cli": "^7.0.1",
     "remark-preset-lint-recommended": "^3.0.3",
     "restify": "^8.5.1",
-    "snyk": "^1.297.2",
+    "snyk": "^1.319.0",
     "stryker-cli": "^1.0.0",
     "tap-spec": "^5.0.0",
     "tape": "^4.13.0",
