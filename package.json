@@ -35,7 +35,7 @@
     "@types/password-hash": "^1.2.20",
     "@types/tape": "^4.2.34",
     "ava": "^3.3.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chance": "^1.1.4",
     "dayjs": "^1.8.20",
     "dot-prop": "^5.1.1",
